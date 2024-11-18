@@ -19,6 +19,13 @@ public class Playermovement : MonoBehaviour
     bool isGrounded = true;
 
 
+    private Vector3 movePlayer;
+
+
+    public Camera mainCamera;
+    private Vector3 camForward;
+    private Vector3 camRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +39,10 @@ public class Playermovement : MonoBehaviour
         horInput = Input.GetAxis("Horizontal");
         verInput = Input.GetAxis("Vertical");
         Jump();
+        
+        CamDirection();
+
+        movePlayer = playerInput.x * camRight + playrInput.z * camForward;
     }
 
 
@@ -67,6 +78,20 @@ public class Playermovement : MonoBehaviour
             }
         }
     }
+    
+    void CamDirection()
+    {
+        camForward = mainCamera.transform.forward;
+        camRight = mainCamera.transform.right;
+
+        camForward.y = 0;
+        camRight.y = 0;
+
+        camForward = camForward.normalized;
+        camRight = camRight.normalized;
+
+    }
+
 
 
 
