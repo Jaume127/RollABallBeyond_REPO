@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Towermove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Velocidad de rotación
+    public float rotationSpeed = 100f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Detectar entrada del usuario para rotar sobre el eje Z
+        if (Input.GetKey(KeyCode.J))
+        {
+            // Rotar hacia la izquierda sobre el eje Z (negativo)
+            transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            // Rotar hacia la derecha sobre el eje Z (positivo)
+            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+        }
     }
 }
