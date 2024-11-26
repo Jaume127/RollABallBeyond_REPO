@@ -8,18 +8,30 @@ public class Playerinteraction : MonoBehaviour
 {
 
 
-[Header("Point System Parameters")]
+
+    [Header("UI References")]
+    public TMP_Text pointsText; //Ref al texto de UI que quiero que cambie dinamicamente según los puntos del player
+
+
+    [Header("Point System Parameters")]
     // Variables para definir los puntos del jugador
     public int currentPoints;
     public int winPoints;
+    public GameObject winGoal;
+
+
+    [Header("Respawn Parameters")]
+    public Transform respawnPoint;
+    public float respawnFallLimit;
 
 
 
-
-     private void Update()
+    private void Update()
     {
         if (currentPoints < 0) { currentPoints = 0; }
-     
+        if (transform.position.y <= respawnFallLimit) { Respawn(); }
+        if (currentPoints >= winPoints) { winGoal.SetActive(true); }
+        UIUpdater();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,7 +41,25 @@ public class Playerinteraction : MonoBehaviour
             other.gameObject.SetActive(false);
             // Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("PickDown"))
+        {
+            currentPoints -= 1;
+            other.gameObject.SetActive(false);
+
+        }
+
     }
+
+    void UIUpdater()
+        {
+            pointsText.text = "Points: " + currentPoints.ToString() + "/" + winPoints.ToString();
+        }
+
+    void Respawn()
+    {
+        transform.position = respawnPoint.position;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
