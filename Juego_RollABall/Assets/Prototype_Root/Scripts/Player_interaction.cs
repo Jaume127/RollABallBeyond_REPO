@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //Librería para poder referenciar elementos de User Interface.
 using TMPro; //Librería para poder referenciar elementos de Text Mes Pro
+using UnityEngine.SceneManagement;
 
 public class Playerinteraction : MonoBehaviour
 {
@@ -43,9 +44,12 @@ public class Playerinteraction : MonoBehaviour
         }
         if (other.gameObject.CompareTag("PickDown"))
         {
-            currentPoints -= 1;
-            other.gameObject.SetActive(false);
+            Respawn();
 
+        }
+        if (other.gameObject.CompareTag("winGoal"))
+        {
+            SceneManager.LoadScene(2);
         }
 
 
