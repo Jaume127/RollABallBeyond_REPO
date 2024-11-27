@@ -10,12 +10,12 @@ public class Towermove : MonoBehaviour
     void Update()
     {
         // Detectar entrada del usuario para rotar sobre el eje Z
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.L))
         {
             // Rotar hacia la izquierda sobre el eje Z (negativo)
             transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.J))
         {
             // Rotar hacia la derecha sobre el eje Z (positivo)
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);

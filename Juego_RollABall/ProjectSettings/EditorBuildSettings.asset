@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype_Root/Scenes/How_to_play.unity
     guid: 10f9c9d14df04c749872f7182c03eda9
+  - enabled: 1
+    path: Assets/Prototype_Root/Scenes/Finish.unity
+    guid: 815d6e6abec7b2a49b47bca7ac6db5cb
   m_configObjects: {}

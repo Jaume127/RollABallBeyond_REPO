@@ -51,6 +51,10 @@ public class Playerinteraction : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+        if (other.gameObject.CompareTag("winGoal1"))
+        {
+            SceneManager.LoadScene(4);
+        }
 
 
     }

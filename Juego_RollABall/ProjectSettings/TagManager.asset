@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - PickDown
   - winGoal
+  - winGoal1
   layers:
   - Default
   - TransparentFX
