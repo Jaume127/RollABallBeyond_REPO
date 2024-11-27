@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prototype_Root/Scenes/JaumeTest.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Prototype_Root/Scenes/MainMenu.unity
+    guid: f5491bcdd4002de4eae7dd4d28925083
+  - enabled: 1
+    path: Assets/Prototype_Root/Scenes/Part1_game.unity
+    guid: d8fdbca1118fa1a47981f43ea0917017
+  - enabled: 1
+    path: Assets/Prototype_Root/Scenes/Part2_game.unity
+    guid: 9aa46eba78920004ebdc9cb8ff777a36
+  - enabled: 1
+    path: Assets/Prototype_Root/Scenes/How_to_play.unity
+    guid: 10f9c9d14df04c749872f7182c03eda9
   m_configObjects: {}

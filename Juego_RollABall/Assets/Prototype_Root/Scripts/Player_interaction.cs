@@ -48,6 +48,7 @@ public class Playerinteraction : MonoBehaviour
 
         }
 
+
     }
 
     void UIUpdater()
@@ -59,6 +60,7 @@ public class Playerinteraction : MonoBehaviour
     {
         transform.position = respawnPoint.position;
     }
+
 
     // Start is called before the first frame update
     void Start()

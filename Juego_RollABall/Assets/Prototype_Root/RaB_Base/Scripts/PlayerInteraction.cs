@@ -51,13 +51,7 @@ public class PlayerInteraction : MonoBehaviour
 
         }
 
-        if (other.gameObject.CompareTag("Finish"))
-        {
-            WinCall();
-            other.gameObject.SetActive(false);
-        }
-
-    }
+            }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -77,10 +71,5 @@ public class PlayerInteraction : MonoBehaviour
 
 
 
-    void WinCall()
-    {
-        //Acción de cambio de escena
-        sceneManagerScript.SceneLoader(sceneToLoad);
-    }
 
 }
